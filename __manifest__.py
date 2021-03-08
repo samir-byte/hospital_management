@@ -8,9 +8,11 @@
     'description': """ This is my first odoo module related to hospital management system  """,
     'category': 'Productivity',
     'website': 'https://www.odoo.com/page/billing',
+    'depends': ['sale'],
     'data': [
         'security/ir.model.access.csv',
-        'views/patient.xml'
+        'views/patient.xml',
+        'views/sale.xml'
     ],
     'demo': [],
     'qweb': [],
