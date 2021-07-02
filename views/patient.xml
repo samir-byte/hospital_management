@@ -20,7 +20,11 @@
         <field name="name">hospital.patient.form</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form string="Patients">
+            <header>
+            <button string="Create Appointment" name="%(hospital_management.create_appointment_wizard)d" type="action" context="" class="oe_highlight"/>
+            <button string="Send Email" name="action_send_card" type="object" context="" class="oe_highlight"/>
+            </header>
                 <sheet>
                 <div class="oe_button_box" name="button_box">
                     <button name="open_patient_appointments" type="object" class="oe_stat_button" icon="fa-calendar">
@@ -40,8 +44,11 @@
                         <group>
                             <field name="gender"></field>
                             <field name="note"></field>
+                            <field name="email" />
                         </group>
                         <group>
+                            <field name="doctor_id" />
+                            <field name="doctor_gender" />
                             <field name="image"/>
                             <field name="age_grp" />
                         </group>
@@ -55,6 +62,15 @@
             </form>
         </field>
     </record>
+
+    <!-- <record id="patients_appointments_action" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="domain">[]</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hospital_management.appointment_list_action"/>
+        <field name="binding_model_id" ref="model_hospital_patient" />
+    </record> -->
 
     <!--action-->
     <record id="patient_action" model="ir.actions.act_window">

@@ -1,6 +1,7 @@
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
+
 class HospitalPatient(models.Model):
     _name = "hospital.appointment"
     _inherit = ['mail.thread','mail.activity.mixin']
@@ -22,6 +23,7 @@ class HospitalPatient(models.Model):
         for record in self:
             record.state = 'cancel'
         return record.state
+
 
     name = fields.Many2one('hospital.patient', string='Patient')
     age = fields.Integer(string='Age', track_visibility='onchange', related='name.age')

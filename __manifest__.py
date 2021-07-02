@@ -11,9 +11,19 @@
     'depends': ['sale'],
     'data': [
         'security/ir.model.access.csv',
+        'wizards/create_appointment.xml',
         'views/patient.xml',
+        
         'views/sale.xml',
-        'views/appointment.xml'
+        'views/appointment.xml',
+        'views/doctor.xml',
+        'views/web_patient.xml',
+        'views/web_form.xml',
+        'reports/patient_card.xml',
+        
+        'reports/report.xml',
+        'data/mail_template.xml',
+        'data/cron.xml'
     ],
     'demo': [],
     'qweb': [],

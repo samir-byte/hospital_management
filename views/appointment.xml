@@ -58,8 +58,9 @@
         </field>
     </record>
 
-    <menuitem name="Appointment" sequence="10" id="appointment_root_menu" parent="hospital_root"/>
-    <menuitem name="Appointment" sequence="10" id="appointment_menu" parent="appointment_root_menu" action="appointment_list_action"/>
+    <menuitem name="Appointments" sequence="10" id="appointment_root_menu" parent="hospital_root"/>
+    <menuitem name="Appointments" sequence="10" id="appointment_menu" parent="appointment_root_menu" action="appointment_list_action"/>
+    <menuitem name="Create Appointment" sequence="10" id="create_appointment_menu" parent="appointment_root_menu" action="create_appointment_wizard"/>
     
 
 
